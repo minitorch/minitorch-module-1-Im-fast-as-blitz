@@ -70,7 +70,7 @@ def topological_sort(variable: Variable) -> Iterable[Variable]:
     result = []
     visited = set()
 
-    def dfs(var: Variable):
+    def dfs(var: Variable) -> None:
         if var.unique_id in visited or var.is_constant():
             return
         if not var.is_leaf():

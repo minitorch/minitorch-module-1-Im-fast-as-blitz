@@ -151,7 +151,7 @@ class Sigmoid(ScalarFunction):
     @staticmethod
     def backward(ctx: Context, d_output: float) -> float:
         a, = ctx.saved_values
-        return d_output * a * (1 - a)
+        return operators.mul(d_output, a * (1 - a))
 
 
 class ReLU(ScalarFunction):

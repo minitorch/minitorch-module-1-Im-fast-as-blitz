@@ -48,11 +48,11 @@ def neg(x: float) -> float:
     return -x
 
 
-def lt(x: float, y: float) -> bool:
+def lt(x: float, y: float) -> float:
     return float(x < y)
 
 
-def eq(x: float, y: float) -> bool:
+def eq(x: float, y: float) -> float:
     return float(x == y)
 
 
