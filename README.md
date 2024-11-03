@@ -1,4 +1,3 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=16910205&assignment_repo_type=AssignmentRepo)
 # MiniTorch Module 1
 
 <img src="https://minitorch.github.io/minitorch.svg" width="50%">
@@ -16,3 +15,38 @@ python sync_previous_module.py previous-module-dir current-module-dir
 The files that will be synced are:
 
         minitorch/operators.py minitorch/module.py tests/test_module.py tests/test_operators.py project/run_manual.py
+
+## Simple dataset
+
+Last log
+```
+Epoch: 500/500, loss: 14.890488402542761, correct: 150
+```
+![plot](./data/simple.png)
+![plot](./data/simple_result.png)
+
+## XOR dataset
+Last log
+```
+Epoch: 500/500, loss: 45.18039081721014, correct: 132
+```
+![plot](./data/xor.png)
+![plot](./data/xor_result.png)
+
+## Spiral dataset
+
+Last log
+```
+Epoch: 500/500, loss: 102.38636243775998, correct: 87
+```
+![plot](./data/Spiral.png)
+![plot](./data/spiral_result.png)
+
+## Circle dataset
+
+Last log
+```
+Epoch: 500/500, loss: 55.53954372699599, correct: 122
+```
+![plot](./data/circle.png)
+![plot](./data/circle_result.png)
