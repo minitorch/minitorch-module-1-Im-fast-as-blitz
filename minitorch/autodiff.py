@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import Any, Iterable, List, Tuple
+from typing import Any, Iterable, Tuple
 from collections import defaultdict
 
 from typing_extensions import Protocol
@@ -30,7 +30,6 @@ def central_difference(f: Any, *vals: Any, arg: int = 0, epsilon: float = 1e-6) 
     y[arg] -= epsilon
     # return (f(*x) - f(*y)) * 1e+6 / (2)
     return (f(*x) - f(*y)) / (2 * epsilon)
-
 
 
 variable_count = 1

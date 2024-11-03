@@ -3,7 +3,7 @@
 import math
 
 # ## Task 0.1
-from typing import Callable, Iterable, Generator, Optional
+from typing import Callable, Iterable
 
 #
 # Implementation of a prelude of elementary functions.
@@ -55,8 +55,10 @@ def lt(x: float, y: float) -> bool:
 def eq(x: float, y: float) -> bool:
     return float(x == y)
 
+
 def max(x: float, y: float) -> float:
     return x if x > y else y
+
 
 def min(x: float, y: float) -> float:
     return x if x < y else y
@@ -74,6 +76,7 @@ def sigmoid(x: float) -> float:
 
 def relu(x: float) -> float:
     return float(max(x, 0))
+
 
 def log(x: float) -> float:
     return math.log(x + 1e-6)
@@ -126,8 +129,8 @@ def zipWith(func: Callable[[float, float], float], arr1: Iterable[float], arr2: 
     a_iter = iter(arr1)
     b_iter = iter(arr2)
 
-    val_a = 0
-    val_b = 0
+    val_a = 0.0
+    val_b = 0.0
 
     alive_a = True
     alive_b = True
@@ -139,7 +142,7 @@ def zipWith(func: Callable[[float, float], float], arr1: Iterable[float], arr2: 
         val_b = next(b_iter)
     except StopIteration:
         alive_b = False
-    
+
     while alive_a or alive_b:
         if alive_a and alive_b:
             yield func(val_a, val_b)
@@ -165,7 +168,7 @@ def zipWith(func: Callable[[float, float], float], arr1: Iterable[float], arr2: 
                 alive_b = False
 
 
-def reduce(arr1:Iterable[float], func: Callable[[float, float], float], start: float) -> float:
+def reduce(arr1: Iterable[float], func: Callable[[float, float], float], start: float) -> float:
     for val in arr1:
         start = func(start, val)
     return start

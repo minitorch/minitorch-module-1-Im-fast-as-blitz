@@ -6,8 +6,6 @@ import random
 
 import minitorch
 
-from minitorch.scalar_functions import Mul
-
 
 class Network(minitorch.Module):
     def __init__(self, hidden_layers):
